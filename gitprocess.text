@@ -1,0 +1,119 @@
+PS C:\Users\dhand\OneDrive\Desktop\project> cd project
+PS C:\Users\dhand\OneDrive\Desktop\project\project> git pull
+error: cannot open '.git/FETCH_HEAD': Permission denied
+PS C:\Users\dhand\OneDrive\Desktop\project\project> 
+ *  History restored 
+
+PS C:\Users\dhand\OneDrive\Desktop\project> git clone https://github.com/gokul-163/html.git
+Cloning into 'html'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+PS C:\Users\dhand\OneDrive\Desktop\project> cd html
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git branch
+* main
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/raja
+  remotes/origin/ravi
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git chechout raja
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git checkout raja
+branch 'raja' set up to track 'origin/raja'.
+Switched to a new branch 'raja'
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git branch
+  main
+* raja
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git status
+On branch raja
+Your branch is up to date with 'origin/raja'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hi
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git add .
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git commit -m "sdsa"
+[raja 8d56153] sdsa
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git push origin raja
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 412 bytes | 206.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/gokul-163/html.git
+   2aa8085..8d56153  raja -> raja
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git merge raja
+Updating 2aa8085..8d56153
+Fast-forward
+ hi | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/gokul-163/html.git
+   2aa8085..8d56153  main -> main
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git branch
+* main
+  raja
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git checkout ravi
+branch 'ravi' set up to track 'origin/ravi'.
+Switched to a new branch 'ravi'
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git pull origin main
+From https://github.com/gokul-163/html
+ * branch            main       -> FETCH_HEAD
+Updating 2aa8085..8d56153
+Fast-forward
+ hi | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git branch
+  main
+  raja
+* ravi
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git add .
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git commit -m "asfas"
+[ravi 0c29519] asfas
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git push origin ravi
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gokul-163/html.git
+   2aa8085..0c29519  ravi -> ravi
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git merge ravi
+Updating 8d56153..0c29519
+Fast-forward
+ hi | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/gokul-163/html.git
+   8d56153..0c29519  main -> main
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git checkout raja
+Switched to branch 'raja'
+Your branch is up to date with 'origin/raja'.
+PS C:\Users\dhand\OneDrive\Desktop\project\html> git merge main
+Updating 8d56153..0c29519
+Fast-forward
+ hi | 3 +++
+ 1 file changed, 3 insertions(+)
+PS C:\Users\dhand\OneDrive\Desktop\project\html> 
